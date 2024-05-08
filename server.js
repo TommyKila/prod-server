@@ -63,7 +63,7 @@ app.get("/products", (req, res) => {
   }
 */
 app.post("/products", (req, res) => {
-  const { image, name, price, rating } = req.body;
+  const { image, name, price, company, category, description } = req.body;
 
   fs.readFile("db.json", "utf8", (err, data) => {
     if (err) {
@@ -83,8 +83,7 @@ app.post("/products", (req, res) => {
       id: maxId + 1,
       image,
       name,
-      price,
-      rating,
+      price, company, category, description
     };
 
     jsonData.items.push(newItem);
@@ -113,7 +112,7 @@ app.post("/products", (req, res) => {
 */
 app.put("/products/:id", (req, res) => {
   const id = parseInt(req.params.id);
-  const { image, name, price, rating } = req.body;
+  const { image, name, price, company, category, description  } = req.body;
 
   fs.readFile("db.json", "utf8", (err, data) => {
     if (err) {
@@ -133,10 +132,7 @@ app.put("/products/:id", (req, res) => {
 
     jsonData.items[index] = {
       id,
-      image,
-      name,
-      price,
-      rating,
+      image, name, price, company, category, description
     };
 
     fs.writeFile("db.json", JSON.stringify(jsonData), (err) => {
@@ -188,4 +184,4 @@ app.delete("/products/:id", (req, res) => {
 
 const port = process.env.PORT || 1500
 
-app.listen(port, () => {console.log("Server is running");});
+app.listen(port, () => { console.log("Server is running"); });

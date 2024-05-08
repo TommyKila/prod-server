@@ -1,7 +1,7 @@
 {
     "items": [
         {
-            "id": "recZkNf2kwmdBcqd0",
+            "id": 1,
             "name": "accent chair",
             "price": 25999,
             "image": "https://www.course-api.com/images/store/product-1.jpeg",
@@ -16,7 +16,7 @@
             "shipping": true
         },
         {
-            "id": "recEHmzvupvT8ZONH",
+            "id": 2,
             "name": "albany sectional",
             "price": 109999,
             "image": "https://www.course-api.com/images/store/product-2.jpeg",
@@ -29,7 +29,7 @@
             "category": "living room"
         },
         {
-            "id": "rec5NBwZ5zCD9nfF0",
+            "id": 3,
             "name": "albany table",
             "price": 309999,
             "image": "https://www.course-api.com/images/store/product-3.jpeg",
@@ -42,7 +42,7 @@
             "category": "kitchen"
         },
         {
-            "id": "recd1jIVIEChmiwhe",
+            "id": 4,
             "name": "armchair",
             "price": 12599,
             "image": "https://www.course-api.com/images/store/product-4.jpeg",
@@ -51,13 +51,13 @@
                 "#00ff00",
                 "#0000ff"
             ],
-            "company": "marcos",
+            "company": 5,
             "description": "Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge",
             "category": "bedroom",
             "shipping": true
         },
         {
-            "id": "recotY5Nh00DQFdkm",
+            "id": 5,
             "name": "dining table",
             "price": 42999,
             "image": "https://www.course-api.com/images/store/product-5.jpeg",
@@ -72,7 +72,7 @@
             "shipping": true
         },
         {
-            "id": "rec1Ntk7siEEW9ha1",
+            "id": 6,
             "name": "emperor bed",
             "price": 23999,
             "image": "https://www.course-api.com/images/store/product-6.jpeg",
@@ -86,7 +86,7 @@
             "shipping": true
         },
         {
-            "id": "recNZ0koOqEmilmoz",
+            "id": 7,
             "name": "entertainment center",
             "price": 59999,
             "image": "https://www.course-api.com/images/store/product-7.jpeg",
@@ -101,7 +101,7 @@
             "shipping": true
         },
         {
-            "id": "recrfxv3EwpvJwvjq",
+            "id": 8,
             "name": "high-back bench",
             "price": 39999,
             "image": "https://www.course-api.com/images/store/product-8.jpeg",
@@ -116,7 +116,7 @@
             "shipping": true
         },
         {
-            "id": "recoW8ecgjtKx2Sj2",
+            "id": 9,
             "name": "leather chair",
             "price": 20099,
             "image": "https://www.course-api.com/images/store/product-9.jpeg",
@@ -130,7 +130,7 @@
             "category": "bedroom"
         },
         {
-            "id": "recEOA6qtDag1hRbU",
+            "id": 10,
             "name": "leather sofa",
             "price": 99999,
             "image": "https://www.course-api.com/images/store/product-10.jpeg",
@@ -143,7 +143,7 @@
             "category": "office"
         },
         {
-            "id": "recoAJYUCuEKxcPSr",
+            "id": 11,
             "name": "modern bookshelf",
             "price": 31999,
             "image": "https://www.course-api.com/images/store/product-11.jpeg",
@@ -158,7 +158,7 @@
             "category": "kids"
         },
         {
-            "id": "recQ0fMd8T0Vk211E",
+            "id": 12,
             "name": "modern poster",
             "price": 3099,
             "image": "https://www.course-api.com/images/store/product-12.jpeg",
@@ -171,7 +171,7 @@
             "shipping": true
         },
         {
-            "id": "rec7CjDWKRgNQtrKe",
+            "id": 13,
             "name": "shelf",
             "price": 30999,
             "image": "https://www.course-api.com/images/store/product-13.jpeg",
@@ -183,7 +183,7 @@
             "category": "living room"
         },
         {
-            "id": "recF0KpwlkF7e8kXO",
+            "id": 14,
             "name": "simple chair",
             "price": 109999,
             "image": "https://www.course-api.com/images/store/product-14.jpeg",
@@ -196,7 +196,7 @@
             "shipping": true
         },
         {
-            "id": "recs5BSVU3qQrOj4E",
+            "id": 15,
             "name": "sofa set",
             "price": 129999,
             "image": "https://www.course-api.com/images/store/product-15.jpeg",
@@ -210,7 +210,7 @@
             "shipping": true
         },
         {
-            "id": "recroK1VD8qVdMP5H",
+            "id": 16,
             "name": "suede armchair",
             "price": 15999,
             "image": "https://www.course-api.com/images/store/product-16.jpeg",
@@ -222,7 +222,7 @@
             "category": "office"
         },
         {
-            "id": "rec7JInsuCEHgmaGe",
+            "id": 17,
             "name": "utopia sofa",
             "price": 79999,
             "image": "https://www.course-api.com/images/store/product-17.jpeg",
@@ -236,7 +236,7 @@
             "category": "living room"
         },
         {
-            "id": "rec3jeKnhInKHJuz2",
+            "id": 18,
             "name": "vase table",
             "price": 120999,
             "image": "https://www.course-api.com/images/store/product-18.jpeg",
@@ -249,7 +249,7 @@
             "category": "office"
         },
         {
-            "id": "recv2ohxljlK2FZO7",
+            "id": 19,
             "name": "wooden bed",
             "price": 250099,
             "image": "https://www.course-api.com/images/store/product-19.jpeg",
@@ -262,7 +262,7 @@
             "category": "bedroom"
         },
         {
-            "id": "recJIjREF3dlFi3sR",
+            "id": 20,
             "name": "wooden desk",
             "price": 150999,
             "image": "https://www.course-api.com/images/store/product-20.jpeg",
@@ -275,7 +275,7 @@
             "shipping": true
         },
         {
-            "id": "recm7wC8TBVdU9oEL",
+            "id": 21,
             "name": "wooden desk",
             "price": 40099,
             "image": "https://www.course-api.com/images/store/product-21.jpeg",
@@ -288,7 +288,7 @@
             "category": "office"
         },
         {
-            "id": "rectfNsySwAJeWDN2",
+            "id": 22,
             "name": "wooden table",
             "price": 234999,
             "image": "https://www.course-api.com/images/store/product-22.jpeg",
