@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 app.get("/single-product", (req, res) => {
-  const id = req.query.id;
+  const id = parseInt(req.params.id);
 
   fs.readFile("db.json", "utf8", (err, data) => {
     if (err) {
