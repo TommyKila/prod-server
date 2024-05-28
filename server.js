@@ -1,8 +1,18 @@
 const express = require("express");
 const fs = require("fs");
+const cors = require("cors");
 
 const app = express();
 
+// Cors configuration - Allows requests from localhost:4200
+const corsOptions = {
+  origin: "http://localhost:4200",
+  optionsSuccessStatus: 204,
+  methods: "GET, POST, PUT, DELETE",
+};
+
+// Use cors middleware
+app.use(cors(corsOptions));
 
 app.use(express.json());
 
