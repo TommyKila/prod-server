@@ -32,7 +32,7 @@ app.post('/users/signup', (req, res) => {
 
     const { username, password, phone } = req.body
 
-    if (username != "" && password != "" && phone != "") {
+    if (username != "" || password != "" || phone != "" || username != null || password != null || phone != null) {
 
       newItem = {
         username, password, phone
