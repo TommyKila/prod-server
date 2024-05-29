@@ -53,7 +53,7 @@ app.post('/users/signup', (req, res) => {
           return;
         }
 
-        res.status(201).json(newItem);
+        res.status(200).json(newItem);
       });
     } else {
       res.status(400).send("Invalid sign up information")
