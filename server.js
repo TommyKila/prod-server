@@ -16,6 +16,35 @@ app.use(cors(corsOptions));
 
 app.use(express.json());
 
+app.post('/users/login', (req, res) => {
+
+  fs.readFile("users.json", "utf8", (err, data) => {
+    if (err) {
+      console.log(err);
+      res.status(500).send("Internal Server Error");
+      return;
+    }
+
+    const jsonData = JSON.parse(data);
+
+    const user = jsonData.users.find(user => user.username === req.body.username);
+
+    if (user == null) {
+      return res.status(400).send('Invalid username or password');
+    }
+
+    if (user.password === req.body.password) {
+      res.status(200).json({
+        user
+      });
+    } else {
+      res.status(400).send('Invalid username or password');
+      return;
+    }
+  });
+})
+
+
 app.get("/single-product", (req, res) => {
   const id = parseInt(req.query.id);
 
@@ -62,16 +91,6 @@ app.get("/products", (req, res) => {
   });
 });
 
-// POST route - Allows to add a new item
-// example: localhost:3000/products
-/*
-  body: {
-    "image": "https://your-image-url.com/image.png",
-    "name": "T-shirt",
-    "price": "10",
-    "rating": 4
-  }
-*/
 app.post("/products", (req, res) => {
   const { image, name, price, company, category, description } = req.body;
 
@@ -110,16 +129,7 @@ app.post("/products", (req, res) => {
   });
 });
 
-// PUT route - Allows to update an item
-// example: localhost:3000/products/1
-/*
-  body: {
-    "image": "https://your-image-url.com/image.png",
-    "name": "T-shirt",
-    "price": "10",
-    "rating": 4
-  }
-*/
+
 app.put("/products/:id", (req, res) => {
   const id = parseInt(req.params.id);
   const { image, name, price, company, category, description  } = req.body;
@@ -157,8 +167,7 @@ app.put("/products/:id", (req, res) => {
   });
 });
 
-// DELETE route - Allows to delete an item
-// example: localhost:3000/products/1
+
 app.delete("/products/:id", (req, res) => {
   const id = parseInt(req.params.id);
 
