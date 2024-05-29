@@ -32,26 +32,33 @@ app.post('/users/signup', (req, res) => {
 
     const { username, password, phone } = req.body
 
-    newItem = {
-      username, password, phone
-    }
+    if (username != "" && password != "" && phone != "") {
 
-    jsonData.users.push(newItem);
+      newItem = {
+        username, password, phone
+      }
 
-    if (user != null) {
-      res.status(400).send('Username already in existed');
-      return;
-    }
+      jsonData.users.push(newItem);
 
-    fs.writeFile("users.json", JSON.stringify(jsonData), (err) => {
-      if (err) {
-        console.log(err);
-        res.status(500).send("Internal Server Error");
+      if (user != null) {
+        res.status(400).send('Username already in existed');
         return;
       }
 
-      res.status(201).json(newItem);
-    });
+      fs.writeFile("users.json", JSON.stringify(jsonData), (err) => {
+        if (err) {
+          console.log(err);
+          res.status(500).send("Internal Server Error");
+          return;
+        }
+
+        res.status(201).json(newItem);
+      });
+    } else {
+      res.status(400).send("Invalid sign up information")
+      return;
+    }
+
   });
 })
 
