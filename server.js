@@ -32,6 +32,12 @@ app.post('/users/signup', (req, res) => {
 
     const { username, password, phone } = req.body
 
+    
+    if (user != null) {
+        res.status(400).send('Username already in existed');
+        return;
+    }
+
     if (username != "" && password != "" && phone != "" && username != null && password != null && phone != null) {
 
       newItem = {
@@ -39,11 +45,6 @@ app.post('/users/signup', (req, res) => {
       }
 
       jsonData.users.push(newItem);
-
-      if (user != null) {
-        res.status(400).send('Username already in existed');
-        return;
-      }
 
       fs.writeFile("users.json", JSON.stringify(jsonData), (err) => {
         if (err) {
