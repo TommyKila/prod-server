@@ -16,6 +16,46 @@ app.use(cors(corsOptions));
 
 app.use(express.json());
 
+
+app.post('/users/signup', (req, res) => {
+
+  fs.readFile("users.json", "utf8", (err, data) => {
+    if (err) {
+      console.log(err);
+      res.status(500).send("Internal Server Error");
+      return;
+    }
+
+    const jsonData = JSON.parse(data);
+
+    const user = jsonData.users.find(user => user.username === req.body.username);
+
+    const { username, password, phone } = req.body
+
+    newItem = {
+      username, password, phone
+    }
+
+    jsonData.users.push(newItem);
+
+    if (user != null) {
+      res.status(400).send('Username already in existed');
+      return;
+    }
+
+    fs.writeFile("users.json", JSON.stringify(jsonData), (err) => {
+      if (err) {
+        console.log(err);
+        res.status(500).send("Internal Server Error");
+        return;
+      }
+
+      res.status(201).json(newItem);
+    });
+  });
+})
+
+
 app.post('/users/login', (req, res) => {
 
   fs.readFile("users.json", "utf8", (err, data) => {
@@ -30,7 +70,8 @@ app.post('/users/login', (req, res) => {
     const user = jsonData.users.find(user => user.username === req.body.username);
 
     if (user == null) {
-      return res.status(400).send('Invalid username or password');
+      res.status(400).send('Invalid username or password');
+      return;
     }
 
     if (user.password === req.body.password) {
@@ -44,6 +85,22 @@ app.post('/users/login', (req, res) => {
   });
 })
 
+app.get("/users", (req, res) => {
+
+  fs.readFile("users.json", "utf8", (err, data) => {
+    if (err) {
+      console.log(err);
+      res.status(500).send("Internal Server Error");
+      return;
+    }
+
+    const jsonData = JSON.parse(data);
+
+    res.status(200).json({
+      users: jsonData.users,
+    });
+  });
+});
 
 app.get("/single-product", (req, res) => {
   const id = parseInt(req.query.id);
