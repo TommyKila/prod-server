@@ -34,11 +34,11 @@ app.post('/users/signup', (req, res) => {
 
     if (username != "" || password != "" || phone != "" || username != null || password != null || phone != null) {
 
-      newItem = {
+      newAccount = {
         username, password, phone
       }
 
-      jsonData.users.push(newItem);
+      jsonData.users.push(newAccount);
 
       if (user != null) {
         res.status(400).send('Username already in existed');
@@ -52,7 +52,7 @@ app.post('/users/signup', (req, res) => {
           return;
         }
 
-        res.status(201).json(newItem);
+        res.status(201).json(newAccount);
       });
     } else {
       res.status(400).send("Invalid sign up information")
