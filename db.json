@@ -240,7 +240,6 @@
             "name": "vase table",
             "price": 120999,
             "image": "https://www.course-api.com/images/store/product-18.jpeg",
-            "featured": true,
             "colors": [
                 "#ff0000"
             ],
@@ -253,6 +252,7 @@
             "name": "wooden bed",
             "price": 250099,
             "image": "https://www.course-api.com/images/store/product-19.jpeg",
+            "featured": true,
             "colors": [
                 "#000",
                 "#ffb900"
@@ -279,6 +279,7 @@
             "name": "wooden desk",
             "price": 40099,
             "image": "https://www.course-api.com/images/store/product-21.jpeg",
+            "featured": true,
             "colors": [
                 "#0000ff",
                 "#00ff00"
@@ -292,7 +293,6 @@
             "name": "wooden table",
             "price": 234999,
             "image": "https://www.course-api.com/images/store/product-22.jpeg",
-            "featured": true,
             "colors": [
                 "#ffb900",
                 "#ff0000"
